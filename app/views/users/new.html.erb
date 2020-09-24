@@ -1,0 +1,7 @@
+<h1>Welcome!</h1>
+<h3>Please enter a login for user</h3>
+<%= form_tag("/user", method: "post") do %>
+  <%= label_tag(:q, "") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
