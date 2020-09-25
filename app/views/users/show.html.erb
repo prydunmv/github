@@ -1,5 +1,9 @@
 <h1><%= params['q'].capitalize %>:</h1>
-<h2><%= @object.name %></h2>
-<% @repos.each do |repo|%>
- <p><%= repo.name %></p>
+<% if @object.nil?%>
+  <%= ' this login is not valid'%>
+<% else %>
+  <h2><%= @object.name %></h2>
+  <% @repos.each do |repo|%>
+  <p><%= repo.name %></p>
+  <% end %>
 <% end %>
